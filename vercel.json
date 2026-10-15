@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/index.py": {
-      "includeFiles": "{backend/**,data/**,fest.db,frontend/**}"
+      "includeFiles": "{backend/**,data/**,fest.db,frontend/**,css/**}"
     }
   },
   "rewrites": [
@@ -22,16 +22,20 @@
       "destination": "/api/index.py"
     },
     {
+      "source": "/css/(.*)",
+      "destination": "/css/$1"
+    },
+    {
       "source": "/admin.html",
-      "destination": "/frontend/admin.html"
+      "destination": "/admin.html"
     },
     {
       "source": "/js/(.*)",
-      "destination": "/frontend/js/$1"
+      "destination": "/js/$1"
     },
     {
       "source": "/",
-      "destination": "/frontend/index.html"
+      "destination": "/index.html"
     }
   ]
 }

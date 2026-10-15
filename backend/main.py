@@ -420,7 +420,13 @@ def serve_admin():
     return {"message": "Frontend admin.html not yet created."}
 
 
+# Mount css folder
+css_dir = PROJECT_ROOT / "css" if (PROJECT_ROOT / "css").exists() else FRONTEND_DIR / "css"
+if css_dir.exists():
+    app.mount("/css", StaticFiles(directory=css_dir), name="css")
+
 # Mount js folder so files are accessible at /js/app.js, /js/admin.js
-app.mount("/js", StaticFiles(directory=FRONTEND_DIR / "js"), name="js")
+js_dir = FRONTEND_DIR / "js" if (FRONTEND_DIR / "js").exists() else PROJECT_ROOT / "js"
+app.mount("/js", StaticFiles(directory=js_dir), name="js")
 # Fallback mount for any extra frontend assets
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")

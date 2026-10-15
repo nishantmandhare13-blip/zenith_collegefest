@@ -7,6 +7,9 @@
   <!-- Favicon using SVG data URI -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
   
+  <!-- Local Standalone Design System (Guarantees styling offline and behind proxies) -->
+  <link rel="stylesheet" href="/css/style.css">
+
   <!-- 
     Tailwind CSS Play CDN:
     Note: Play CDN is used for classroom prototype; production uses a compiled stylesheet.
@@ -37,7 +40,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="/" class="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors" title="Back to Student Portal">
-          <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-purple-400" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
           </svg>
           <span class="text-xs sm:text-sm font-semibold hidden sm:inline">Student Portal</span>
@@ -53,7 +56,7 @@
 
       <div class="flex items-center space-x-3">
         <button id="refresh-dashboard-btn" class="inline-flex items-center space-x-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 shadow-sm transition-all" title="Refresh Live Data">
-          <svg id="refresh-icon" class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg id="refresh-icon" class="w-3.5 h-3.5 text-purple-400" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
           </svg>
           <span class="hidden sm:inline">Live Refresh</span>
