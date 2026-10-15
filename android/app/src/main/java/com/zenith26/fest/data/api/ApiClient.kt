@@ -78,7 +78,7 @@ object ApiClient {
                         if (!parsed.detail.isNullOrBlank()) {
                             return parsed.detail
                         }
-                    } catch (_: Exception) {
+                    } catch (e: Exception) {
                         // Return raw error body if JSON parsing fails
                         return "$errorBody (HTTP $statusCode)"
                     }
