@@ -406,17 +406,17 @@ def delete_registration(registration_id: int):
 
 @app.api_route("/", methods=["GET", "HEAD"], include_in_schema=False)
 def serve_root():
-    index_file = FRONTEND_DIR / "index.html"
-    if index_file.exists():
-        return FileResponse(index_file)
+    for candidate in [FRONTEND_DIR / "index.html", PROJECT_ROOT / "index.html"]:
+        if candidate.exists():
+            return FileResponse(candidate)
     return {"message": "Frontend index.html not yet created."}
 
 
 @app.api_route("/admin.html", methods=["GET", "HEAD"], include_in_schema=False)
 def serve_admin():
-    admin_file = FRONTEND_DIR / "admin.html"
-    if admin_file.exists():
-        return FileResponse(admin_file)
+    for candidate in [FRONTEND_DIR / "admin.html", PROJECT_ROOT / "admin.html"]:
+        if candidate.exists():
+            return FileResponse(candidate)
     return {"message": "Frontend admin.html not yet created."}
 
 
