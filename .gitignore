@@ -16,5 +16,15 @@ Thumbs.db
 .vscode/
 .idea/
 
+# Android build outputs
+.gradle/
+build/
+android/.gradle/
+android/app/build/
+android/build/
+local.properties
+*.apk
+*.aab
+
 # Local databases (re-created on startup from data/events_seed.xlsx)
 *.db-journal

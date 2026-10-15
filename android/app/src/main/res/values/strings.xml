@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Zenith \'26</string>
+    <string name="fest_title">ZENITH \'26</string>
+    <string name="fest_dates">Nov 14–15, 2026</string>
+    <string name="fest_tagline">Discover, Compete &amp; Ignite</string>
+    <string name="hero_subtitle">Two electrifying days across technical showdowns, cultural stages, sports turf, and creative masterclasses. Reserve your seat before capacity fills up!</string>
+    <string name="search_placeholder">Search by event title...</string>
+    <string name="explore_events">Explore Events</string>
+    <string name="admin_dashboard">Admin Dashboard</string>
+    <string name="admin_console">Admin Console</string>
+    <string name="view_details">View Details</string>
+    <string name="confirm_registration">Confirm Registration</string>
+    <string name="registering">Registering...</string>
+    <string name="cancel">Cancel</string>
+    <string name="try_again">Try Again</string>
+    <string name="reset_filters">Reset Search &amp; Filters</string>
+    <string name="no_events_found">No events match your criteria</string>
+    <string name="no_events_found_desc">We couldn\'t find any events matching your selected category or search term.</string>
+    <string name="error_fetching_events">Unable to load fest events</string>
+    <string name="error_server_down">The server could not be reached. Please make sure the FastAPI backend is running.</string>
+</resources>
